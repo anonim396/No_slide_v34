@@ -111,7 +111,7 @@ public Action OnPlayerRunCmd(int client, int &buttons)
 		pack.WriteCell(GetClientSerial(client));
 		pack.WriteFloat(fStamina);
 		
-		CreateTimer((gF_Tickrate * 1), Timer_ApplyNewStamina, TIMER_FLAG_NO_MAPCHANGE);//def (gF_Tickrate * 5)
+		CreateTimer((gF_Tickrate * 1), Timer_ApplyNewStamina, pack, TIMER_FLAG_NO_MAPCHANGE);//def (gF_Tickrate * 5)
 	}
 
 	return Plugin_Continue;
